@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7C960A2526F69DF3007872CC /* App_HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960A2426F69DF3007872CC /* App_HabitPlusApp.swift */; };
-		7C960A2726F69DF3007872CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960A2626F69DF3007872CC /* ContentView.swift */; };
 		7C960A2926F69DF3007872CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C960A2826F69DF3007872CC /* Assets.xcassets */; };
 		7C960A2C26F69DF3007872CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C960A2B26F69DF3007872CC /* Preview Assets.xcassets */; };
 		7C960A3726F69DF4007872CC /* App_HabitPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960A3626F69DF4007872CC /* App_HabitPlusTests.swift */; };
 		7C960A4226F69DF4007872CC /* App_HabitPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960A4126F69DF4007872CC /* App_HabitPlusUITests.swift */; };
+		7C960A5326F69EDF007872CC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960A5226F69EDF007872CC /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 /* Begin PBXFileReference section */
 		7C960A2126F69DF3007872CC /* App_HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C960A2426F69DF3007872CC /* App_HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HabitPlusApp.swift; sourceTree = "<group>"; };
-		7C960A2626F69DF3007872CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C960A2826F69DF3007872CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C960A2B26F69DF3007872CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C960A2D26F69DF3007872CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		7C960A3D26F69DF4007872CC /* App_HabitPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = App_HabitPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C960A4126F69DF4007872CC /* App_HabitPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_HabitPlusUITests.swift; sourceTree = "<group>"; };
 		7C960A4326F69DF4007872CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C960A5226F69EDF007872CC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 		7C960A2326F69DF3007872CC /* App_HabitPlus */ = {
 			isa = PBXGroup;
 			children = (
+				7C960A4F26F69E99007872CC /* Splash */,
 				7C960A2426F69DF3007872CC /* App_HabitPlusApp.swift */,
-				7C960A2626F69DF3007872CC /* ContentView.swift */,
 				7C960A2826F69DF3007872CC /* Assets.xcassets */,
 				7C960A2D26F69DF3007872CC /* Info.plist */,
 				7C960A2A26F69DF3007872CC /* Preview Content */,
@@ -128,6 +128,30 @@
 				7C960A4326F69DF4007872CC /* Info.plist */,
 			);
 			path = App_HabitPlusUITests;
+			sourceTree = "<group>";
+		};
+		7C960A4F26F69E99007872CC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7C960A5126F69EAB007872CC /* Model */,
+				7C960A5026F69EA3007872CC /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		7C960A5026F69EA3007872CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C960A5226F69EDF007872CC /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C960A5126F69EAB007872CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C960A2726F69DF3007872CC /* ContentView.swift in Sources */,
 				7C960A2526F69DF3007872CC /* App_HabitPlusApp.swift in Sources */,
+				7C960A5326F69EDF007872CC /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

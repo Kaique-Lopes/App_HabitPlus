@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SplashView.swift
 //  App_HabitPlus
 //
 //  Created by Kaique Lopes de Oliveira on 18/09/21.
@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SplashView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Ola")
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
+struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SplashView()
     }
 }
