@@ -9,12 +9,16 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .error("Errow")
+    @State var state: SplashUIState = .loading
     
     var body: some View {
         switch state {
         case .loading:
-            Text("Loading")
+            ZStack {
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+            }
         case .goToSignUpScreen:
             Text("Tela de Cadastro")
                 .padding()
