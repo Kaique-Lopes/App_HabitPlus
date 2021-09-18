@@ -9,18 +9,21 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .loading
+    @State var state: SplashUIState = .error("Errow")
     
     var body: some View {
         switch state {
         case .loading:
             Text("Loading")
+        case .goToSignUpScreen:
+            Text("Tela de Cadastro")
+                .padding()
         case .goToSignInScreen:
             Text("Tela Login")
         case .goToHomeScreen:
             Text("Tela Principal")
         case .error(let msg):
-            Text("Error \(msg)")
+            Text("Ocorreu um Erro:\n \(msg)")
         }
     }
 }

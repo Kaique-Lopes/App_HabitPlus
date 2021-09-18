@@ -9,6 +9,7 @@ import Foundation
 
 enum SplashUIState {
     case loading
+    case goToSignUpScreen
     case goToSignInScreen
     case goToHomeScreen
     case error(String)
