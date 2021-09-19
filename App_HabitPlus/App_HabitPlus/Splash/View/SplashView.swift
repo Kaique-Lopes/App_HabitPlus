@@ -12,24 +12,26 @@ struct SplashView: View {
     @State var state: SplashUIState = .loading
     
     var body: some View {
+        
         switch state {
         case .loading:
             loadingView()
         case .goToSignUpScreen:
             Text("Tela de Cadastro")
-                .padding()
         case .goToSignInScreen:
             Text("Tela Login")
         case .goToHomeScreen:
             Text("Tela Principal")
         case .error(let msg):
-            Text("Ocorreu um Erro:\n \(msg)")
+            loadingView(error: msg)
         }
     }
 }
 
+
+// MARK: - Extension SplashView ( Refatoração )
 extension SplashView {
-    func loadingView () -> some View {
+    func loadingView (error: String? = nil) -> some View {
         ZStack {
             Image("logo")
                 .resizable()
@@ -38,6 +40,15 @@ extension SplashView {
                 .padding(20)
                 .background(Color.white)
                 .ignoresSafeArea()
+            
+            if let error = error {
+                Text("")
+                    .alert(isPresented:.constant(true)) {
+                        Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("OK")) {
+                            
+                        })
+                    }
+            }
         }
     }
 }
@@ -45,6 +56,7 @@ extension SplashView {
 // MARK: - Criando o Preview
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+//        SplashView(state: .error("deu zika!"))
+        SplashView(state: .error("Erro"))
     }
 }
