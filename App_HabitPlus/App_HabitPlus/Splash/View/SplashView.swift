@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .loading
+    @State var state: SplashUIState = .error("ERRO")
     
     var body: some View {
         
@@ -56,7 +56,6 @@ extension SplashView {
 // MARK: - Criando o Preview
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-//        SplashView(state: .error("deu zika!"))
         SplashView(state: .error("Erro"))
     }
 }
